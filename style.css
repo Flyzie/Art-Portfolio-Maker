@@ -1,5 +1,6 @@
 body{
-    margin: 10px;
+    margin: 12px;
+    background-color: rgb(251, 252, 247);
 }
 
 li, a, button, h1{
@@ -90,8 +91,10 @@ h1{
 
 .mainGrid{
     display:grid;
-    grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2.7rem 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
 }
 
 .sidebar{
@@ -106,9 +109,10 @@ h1{
     grid-row-end: 2;
 }
 
-.element1{
-
-    background-color: blueviolet;
+.piece-1{
+    border: 7px solid;
+    border-color: rgb(237, 244, 135);
+    border-radius: 20px;
 
     grid-column-start: 2;
     grid-column-end: 3;
