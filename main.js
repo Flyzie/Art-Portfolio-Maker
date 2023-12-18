@@ -1,7 +1,9 @@
 
     const container = document.querySelector('.mainGrid');
     const content = document.createElement('div');
+    const popupAdd = document.querySelector('.popupAdd');
     const btn = document.querySelector('#btn');
+    const btnFinalize = document.querySelector('#popupFinalize');
 
     let rowNrS = 1;
     let rowNrE = 2;
@@ -26,9 +28,12 @@
 
             rowNrS++;
             rowNrE++;
-    }
-    
+        }
+        popupAdd.classList.remove('open');
     }
 
-    btn.addEventListener('click', createDiv);
+    btn.addEventListener('click', () => {
+        popupAdd.classList.add('open');
+    });
+    btnFinalize.addEventListener('click', createDiv);
     
