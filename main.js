@@ -1,9 +1,15 @@
 
-    const container = document.querySelector('.mainGrid');
+    
     const content = document.createElement('div');
+    const label = document.createElement('h1');
+    const description = document.createElement('p');
+
+    const container = document.querySelector('.mainGrid');
     const popupAdd = document.querySelector('.popupAdd');
     const btn = document.querySelector('#btn');
     const btnFinalize = document.querySelector('#popupFinalize');
+    const name = document.querySelector('#name');
+    const dsc = document.querySelector('#description');
 
     let rowNrS = 1;
     let rowNrE = 2;
@@ -12,6 +18,10 @@
 
     function createDiv(){
         const content = document.createElement('div');
+        const label = document.createElement('h1');
+        const description = document.createElement('p');
+
+
 
         content.classList.add('piece-1');
         content.style.gridColumnStart = colNrS;
@@ -19,6 +29,18 @@
         content.style.gridRowStart = rowNrS;
         content.style.gridRowEnd = rowNrE;
         container.appendChild(content);
+
+        label.innerHTML = document.getElementById('name').value;
+        description.innerHTML = document.getElementById('description').value;
+
+        content.appendChild(label);
+        content.appendChild(description);
+
+
+
+
+
+
         if(colNrS < 5){
             colNrS++;
             colNrE++;
