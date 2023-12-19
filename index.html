@@ -18,11 +18,11 @@
         
         <div class="main_head">
             <ul class="links">
-                <li><a href="">Blabla</a></li>
-                <li><a href="">Dabla</a></li>
-                <li><a href="">Gabla</a></li>
+                <li><a href="">Instrtuction</a></li>
+                <li><a href="">saved</a></li>
+                <li><a href="">templates</a></li>
             </ul>
-            <button id="btn" class="artButton">Add Art</button>
+            <button id="btn" class="artButton headBtn">Add Art</button>
         </div>
     </header>
 
@@ -37,8 +37,14 @@
 
     <div class="popupAdd" id="popupAdd">
         <div class="popupInterior">
-            <p>asdasdasdasdaasdsadadsa</p>
-            <button id="popupFinalize">Add Piece</button>
+            <form class="popupForm">
+                <label for="name">Artwork Title</label></form>
+                <input type="text" id="name" class="name"><br>
+                <label for="description">Artwork Description</label><br>
+                <textarea type="text" id="description" class="description"></textarea><br>
+            </form>
+            <input type="file" id="Artwork" name="Artwork" class="fileSelector" accept="image/png, image/jpeg"/>
+            <button id="popupFinalize" class="artButton popBtn">Add Artwork</button>
          </div>
     </div>
 </body>
