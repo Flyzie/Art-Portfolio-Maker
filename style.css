@@ -1,3 +1,7 @@
+:root{
+    --pink_main: rgb(244, 210, 226);
+    --yellow_main: rgb(237, 244, 135);
+}
 body{
     margin: 12px;
     background-color: rgb(251, 252, 247);
@@ -13,14 +17,19 @@ li, a, button, h1, label{
 header{
     height: 2.5rem;
     width: 100%;
+    min-width: 60rem;
     margin: 0 0 10px;
     border-radius: 20px;
-    background-color: rgb(244, 210, 226);
+    background-color: var(--pink_main);
 
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+h1{
+    font-size: 20px;
+    width: 35%
 }
 
 .main_head{
@@ -62,8 +71,8 @@ header{
     align-items: center;
 }
 .links>li:hover{
-    background-color: rgb(237, 244, 135);
-    box-shadow: 2px 2px 0px 1px rgba(66, 68, 90, 1);
+    background-color: var(--yellow_main);
+    box-shadow: 0px 4px 0px 0px rgb(124, 129, 57);;
     border-radius: 15px;
 }
 
@@ -71,15 +80,21 @@ header{
 .artButton{
     border: none;
     border-radius: 15px;
-    background-color: rgb(237, 244, 135);
+    background-color: var(--yellow_main);
     
-    box-shadow: 4px 4px 0px 2px rgba(66, 68, 90, 1);
+    box-shadow: 0px 5px 0px 0px rgb(124, 129, 57);
     cursor: pointer;
+}
+
+.artButton:active{
+    box-shadow: none;
+    transform: translateY(4px);
+   
 }
 
 .headBtn{
     margin: 0px 20px 5px 0px;
-    width: 10rem;
+    min-width: 10rem;
     height: 70%;
 }
 
@@ -96,24 +111,23 @@ header{
     border-radius: 20px;
 }
 
-h1{
-    font-size: 20px;
-    width: 35%
-}
+
 
 .mainGrid{
     display:grid;
-    grid-template-columns: 2.7rem 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2.7rem repeat(4, minmax(300px, 1fr));
     grid-template-rows: 1fr 1fr 1fr 1fr;
     column-gap: 10px;
     row-gap: 10px;
+
+    
 }
 
 .sidebar{
     width: 2.5rem;
     height: 350px;
     border-radius: 20px 20px 10px 50px;
-    background-color: rgb(244, 210, 226);
+    background-color: var(--pink_main);
 
     grid-column-start: 1;
     grid-column-end: 2;
@@ -123,8 +137,10 @@ h1{
 
 .piece-1{
     border: 8px solid;
-    border-color: rgb(237, 244, 135);
+    border-color: var(--yellow_main);
+    position: relative;
     border-radius: 20px;
+    aspect-ratio: 5/7;
 
     grid-column-start: 2;
     grid-column-end: 3;
@@ -132,9 +148,24 @@ h1{
     grid-row-end: 2;
 }
 
+.piece-1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+.piece-1 > h1, p{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin-left: 20px;
+    z-index: 888;
+}
+
+
 .popupAdd{
-    background-color: rgb(244, 210, 226);
+    background-color: var(--pink_main);
     border-radius: 60px;
+    box-shadow: 0px 20px 0px 0px rgb(126, 82, 103);
     position: fixed;
     opacity:0;
     transition: all 0.3s ease 0s;
@@ -143,8 +174,9 @@ h1{
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 30rem;
-    height: 30rem;
+    width: 45%;
+    min-width: 25rem;
+    height: 40%;
 
     z-index: -1;
     display: flex;
@@ -163,11 +195,12 @@ h1{
 }
 
 .name{
-    width: 16rem;
+    width: 70%;
     cursor: pointer;
     border-radius: 10px;
     border-style: solid;
-    border-color:rgb(237, 244, 135);
+    box-shadow: 0px 5px 0px 0px rgb(124, 129, 57);
+    border-color:var(--yellow_main);
     border-width: 3px;
     background-color: rgb(122, 87, 104);
     color: white;
@@ -176,12 +209,13 @@ h1{
 }
 
 .description{
-    width: 20rem;
+    width: 70%;
     height: 10rem;
     border-radius: 10px;
     border-width: 3px;
     border-style: solid;
-    border-color:rgb(237, 244, 135);
+    box-shadow: 0px 5px 0px 0px rgb(124, 129, 57);
+    border-color:var(--yellow_main);
     background-color: rgb(122, 87, 104);
     color: white;
     margin: 2px;
