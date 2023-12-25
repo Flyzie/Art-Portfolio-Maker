@@ -26,12 +26,15 @@
         const label = document.createElement('h1');
         const description = document.createElement('p');
         const image = document.createElement('img');
+        const textBox = document.createElement('div');
     
         content.classList.add('piece-1');
         content.style.gridColumnStart = colNrS;
         content.style.gridColumnEnd = colNrE;
         content.style.gridRowStart = rowNrS;
         content.style.gridRowEnd = rowNrE;
+
+        textBox.classList.add('textBox');
         
 
         label.innerHTML = document.getElementById('name').value;
@@ -39,9 +42,10 @@
 
         image.setAttribute('src', URL.createObjectURL(fileSelector.files[0]));
 
-        content.appendChild(label);
-        content.appendChild(description);
+        textBox.appendChild(label);
+        textBox.appendChild(description);
         content.appendChild(image);
+        content.appendChild(textBox);
         
         container.appendChild(content);
 

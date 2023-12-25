@@ -31,6 +31,10 @@
         <div class="sidebar">
         </div>
         <div class="piece-1">
+            <div class="textBox">
+                <h1>Kurwa Jebana</h1>
+                <p>The word-wrap property allows long words to be able to be broken and wrap onto the next line.</p>
+            </div>
         </div>
     </div>
 
@@ -38,9 +42,9 @@
         <div class="popupInterior">
             <form class="popupForm">
                 <label for="name">Artwork Title</label></form>
-                <input type="text" id="name" class="name"><br>
+                <input type="text" id="name" class="name" maxlength="100"><br>
                 <label for="description">Artwork Description</label><br>
-                <textarea type="text" id="description" class="description"></textarea><br>
+                <textarea type="text" id="description" class="description" maxlength="250"></textarea><br>
             </form>
             <input type="file" id="Artwork" name="Artwork" class="fileSelector" accept="image/png, image/jpeg" onchange="previewImage()"/>
             <button id="popupFinalize" class="artButton popBtn">Add Artwork</button>
