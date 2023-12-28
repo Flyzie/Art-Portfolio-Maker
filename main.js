@@ -1,6 +1,6 @@
 
     
-    const content = document.createElement('div');
+    //const content = document.createElement('div');
     const label = document.createElement('h1');
     const description = document.createElement('p');
     const image = document.createElement('img');
@@ -27,6 +27,8 @@
         const description = document.createElement('p');
         const image = document.createElement('img');
         const textBox = document.createElement('div');
+        const closeBtn = document.createElement('button');
+        const closeIcon = document.createElement('img');
     
         content.classList.add('piece-1');
         content.style.gridColumnStart = colNrS;
@@ -34,17 +36,21 @@
         content.style.gridRowStart = rowNrS;
         content.style.gridRowEnd = rowNrE;
 
+        closeBtn.classList.add('closeBtn');
+        closeIcon.src = "cross.png";
+
         textBox.classList.add('textBox');
         
-
         label.innerHTML = document.getElementById('name').value;
         description.innerHTML = document.getElementById('description').value;
 
         image.setAttribute('src', URL.createObjectURL(fileSelector.files[0]));
 
+        closeBtn.appendChild(closeIcon);
         textBox.appendChild(label);
         textBox.appendChild(description);
         content.appendChild(image);
+        content.appendChild(closeBtn);
         content.appendChild(textBox);
         
         container.appendChild(content);
@@ -60,6 +66,10 @@
             rowNrE++;
         }
         popupAdd.classList.remove('open');
+    }
+
+    function removeDiv(){
+        
     }
 
     btn.addEventListener('click', () => {
