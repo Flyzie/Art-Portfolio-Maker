@@ -27,8 +27,12 @@
         const textBox = document.createElement('div');
         const removeBtn = document.createElement('button');
         const closeIcon = document.createElement('img');
+        const imageLinker = document.createElement('a')
 
         const uniqueId = generateId();
+
+        imageLinker.id = 'image_linker';
+        imageLinker.href = 'artwork.html';
     
         content.classList.add('piece-1');
 
@@ -46,7 +50,8 @@
         removeBtn.appendChild(closeIcon);
         textBox.appendChild(label);
         textBox.appendChild(description);
-        content.appendChild(image);
+        imageLinker.appendChild(image);
+        content.appendChild(imageLinker);
         content.appendChild(removeBtn);
         content.appendChild(textBox);
 
