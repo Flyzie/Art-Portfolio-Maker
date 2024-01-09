@@ -14,10 +14,22 @@
     const removeBtn = document.querySelector('#btnRemove');
 
     const name = document.querySelector('#name');
-    const dsc = document.querySelector('#description');
+    const dsc = document.querySelector('#description'); 
     const fileSelector = document.querySelector('#Artwork');
 
-    
+    function removeDiv(id){
+        const divToRemove = document.querySelector('.piece-1[uid="' + id + '"]');
+        divToRemove.remove();
+    }
+
+    function generateId(){
+        return "id" + Math.random().toString(16).slice(2);
+    }
+
+    function assignId(element, id){
+        
+        element.setAttribute('uid', id);
+    }
     
     function createDiv(){
         const content = document.createElement('div');
@@ -67,19 +79,6 @@
         popupAdd.classList.remove('open');
     }
 
-    function removeDiv(id){
-        const divToRemove = document.querySelector('.piece-1[uid="' + id + '"]');
-        divToRemove.remove();
-    }
-
-    function generateId(){
-        return "id" + Math.random().toString(16).slice(2);
-    }
-
-    function assignId(element, id){
-        
-        element.setAttribute('uid', id);
-    }
 
     removeBtn.addEventListener('click', ()=> {
         if(removeBtn.getAttribute('uid') == piece.getAttribute('uid')){
@@ -88,8 +87,6 @@
             console.log('error');
         }
     });
-
-    
 
     btn.addEventListener('click', () => {
         popupAdd.classList.add('open');
