@@ -300,6 +300,7 @@ p{
     margin-top: 3.5rem;
     height: 90vh;
     border-radius: 20px;
+
     background-color: rgb(20, 13, 17);
     overflow: hidden;
     aspect-ratio: 5/2;
@@ -341,11 +342,12 @@ p{
 .creator_display{
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 .profile_pic{
     border-radius: 1000px;
-    width: 8rem;
+    width: 30%;
     aspect-ratio: 1/1;
 
     object-fit:cover;
@@ -354,6 +356,7 @@ p{
 
 .profile_info{
     margin-left: 1rem;
+    width: 65%;
 }
 
 .profile_info > h1{
@@ -367,4 +370,39 @@ p{
     font-weight: 500;
     opacity: 0.7;
     margin: 0;
+}
+/*-------PROFILE SUBPAGE------*/
+
+.profile_c{
+    background-color: var(--pink_main);
+    height: 85vh;
+    width: 96%;
+    margin-top: 3.5rem;
+    border-radius: 30px;
+    padding: 2%;
+}
+
+.profile_m{
+    width: 100%;
+}
+
+.profile_p{
+    border-color: var(--yellow_main);
+    border-style: solid;
+    border-width: 10px;
+}
+
+.profile_info{
+    margin-left: 3rem;
+}
+
+.profile_i > h1{
+    margin: 0;
+    text-align: top;
+    font-size: 7em;
+}
+
+.profile_i > p{
+    font-size: 2em;
+    
 }
