@@ -175,5 +175,6 @@
     
     btnFinalize.addEventListener('click', () => {
         loadToJSON(name.value, dsc.value);
+        console.log(JSON.parse(sessionStorage.getItem('artworkData')));
     });
     
