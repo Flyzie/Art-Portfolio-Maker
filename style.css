@@ -34,6 +34,7 @@ header{
     justify-content: space-between;
     align-items: center;
 }
+
 h1{
     font-size: 20px;
     width: 35%
@@ -73,7 +74,6 @@ p{
 .links>li{
     text-decoration: none;
     height: 70%;
-    margin-bottom: 2px;
     width: auto;
     padding: 0px 10px;
     transition: all 0.1s ease 0s;
@@ -223,6 +223,12 @@ p{
     height: 100%;
 }
 
+.btnClose{
+    width: 10%;
+    right: 3%;
+    top: 2%;
+    opacity: 1;
+}
 
 .popupAdd{
     background-color: var(--pink_main);
@@ -356,7 +362,7 @@ p{
 
 .profile_info{
     margin-left: 1rem;
-    width: 65%;
+    width: 50%;
 }
 
 .profile_info > h1{
@@ -392,9 +398,6 @@ p{
     border-width: 10px;
 }
 
-.profile_info{
-    margin-left: 3rem;
-}
 
 .profile_i > h1{
     margin: 0;
