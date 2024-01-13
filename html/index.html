@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="\style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <script src="main.js" defer></script>
+    <script type="module" src="/js/artworkCreation.js" defer></script>
     <title>Portfolio Site</title>
 </head>
 <body>
     <header>
-        <img src="logo_site.png" class="logo">
+        <img src="/img/logo_site.png" class="logo">
         <h1>Portfolio Creator</h1>
         
         <div class="main_head">
             <ul class="links">
                 <li><a href="profile.html">profile</a></li>
                 <li><a href="index.html">home</a></li>
-                <li><a href="artwork.html">portfolio</a></li>
+                <li><a href="/html/artwork.html">portfolio</a></li>
             </ul>
             <button id="btn" class="artButton headBtn">Add Art</button>
         </div>
@@ -37,7 +37,7 @@
         <div class="piece-1" uid="id746efa7605134">
             <a href="artwork.html" id="image_linker"><img src="https://m.media-amazon.com/images/I/61YXZ5ufAqL._AC_UF1000,1000_QL80_.jpg"></a>
             <button class="btnRemove" id="btnRemove" uid="id746efa7605134">
-            <img src="cross.png">
+            <img src="/img/cross.png">
             </button>
             <div class="textBox">
                 <h1>Placeholder</h1>
@@ -49,7 +49,7 @@
     <div class="popupAdd" id="popupAdd">
         <div class="popupInterior">
             <button class="btnRemove btnClose" id="btnClose" uid="id746efa7605134">
-                <img src="cross.png">
+                <img src="/img/cross.png">
             </button>
             <form class="popupForm">
                 <label for="name">Artwork Title</label></form>

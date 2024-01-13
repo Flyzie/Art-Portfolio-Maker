@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="\style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -11,13 +11,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <script src="main.js" defer></script>
+    <script type="module" src="/js/artworkCreation.js" defer></script>
+    <script type="module" src="/js/loadingArtwork.js" defer></script>
     <title>Document</title>
 </head>
 <body>
 
     <header>
-        <img src="logo_site.png" class="logo">
+        <img src="/img/logo_site.png" class="logo">
         <h1>Portfolio Creator</h1>
         
         <div class="main_head">
@@ -32,8 +33,8 @@
     
     <div class="main_c profile_c">
             <div class = "creator_display profile_m">
-                <img class="profile_pic profile_p" alt="profile picture" src="m.png">
-                <div class="profile_info profile_i">
+                <img class="profile_pic profile_p" alt="profile picture" src="/img/m.png">
+                <div id="profile_info" class="profile_info profile_i">
                     <h1>placeholder name</h1>
                     <p>quote/profile desc</p>
                 </div>
