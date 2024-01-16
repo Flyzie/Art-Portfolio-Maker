@@ -1,4 +1,3 @@
-    import { loadArtwork } from './loadingArtwork.js';
     
     //const content = document.createElement('div');
     const label = document.createElement('h1');
