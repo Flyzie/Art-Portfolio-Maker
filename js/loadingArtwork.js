@@ -21,7 +21,7 @@ function loadArtwork(id){
             console.error('Artwork data not found.');
         }
 }
-
+// Load artwork data from sessionStorage using id in url
 window.onload = function () {
     const urlParams = new URLSearchParams(window.location.search);
     const uid = urlParams.get('uid');
