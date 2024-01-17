@@ -1,8 +1,3 @@
-    
-    //const content = document.createElement('div');
-    const label = document.createElement('h1');
-    const description = document.createElement('p');
-    const image = document.createElement('img');
 
     const container = document.querySelector('.mainGrid');
     const popupAdd = document.querySelector('.popupAdd');
@@ -117,7 +112,46 @@
         // Call the function to create a div from the new data
         createDivFromData(newData);
     }
-    
+
+    function updateFromJSONFile(id){
+        const selectedDiv = document.querySelector('.piece-1[uid="' + id + '"]');
+        const myRequest = new Request("/json/storage.json");
+
+        fetch(myRequest)
+        .then(response => response.json()) 
+        .then(data => {
+            console.log(data);
+        // Find the specific object in the data array that matches the id
+        const specificData = data.find(item => item.uid === id);
+
+        if (specificData) {
+            const children = selectedDiv.childNodes;
+            
+            for(const child of children){
+                console.log(child);
+
+                if(child.tagName == 'DIV'){
+                    const label = child.querySelector('h1');
+                    const description = child.querySelector('p');
+                    label.innerHTML = specificData.title;
+                    description.innerHTML = specificData.description;
+        
+                }
+                if(child.tagName == 'A'){
+                   const image =  child.querySelector('img');
+                   image.setAttribute('src', specificData.image);
+                }
+            }
+        } else {
+            console.error('No data found with the specified id');
+        }
+    });
+        
+    }
+
+    function updateArtwork(id){
+
+    }
 
     
     // Add this block of code to retrieve and display existing data during page load
@@ -126,17 +160,8 @@
         existingData.forEach((data) => {
             createDivFromData(data);
         });
+        updateFromJSONFile("id746efa7605134");
     };
-
-    /*
-    removeBtn.addEventListener('click', ()=> {
-        if(removeBtn.getAttribute('uid') == piece.getAttribute('uid')){
-            removeDiv(removeBtn.getAttribute('uid'));
-        }else{
-            console.log('error');
-        }
-    });
-    */
 
     btn.addEventListener('click', () => {
         popupAdd.classList.add('open');
@@ -146,9 +171,8 @@
         popupAdd.classList.remove('open');
     });
     
-    
     btnFinalize.addEventListener('click', () => {
         loadToJSON(name.value, dsc.value);
-        console.log(JSON.parse(sessionStorage.getItem('artworkData')));
+        console.log('session storage: ',JSON.parse(sessionStorage.getItem('artworkData')));
     });
     
