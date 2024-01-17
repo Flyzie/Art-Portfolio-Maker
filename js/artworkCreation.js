@@ -126,9 +126,8 @@
 
         if (specificData) {
             const children = selectedDiv.childNodes;
-            
+
             for(const child of children){
-                console.log(child);
 
                 if(child.tagName == 'DIV'){
                     const label = child.querySelector('h1');
@@ -145,8 +144,11 @@
         } else {
             console.error('No data found with the specified id');
         }
-    });
-        
+
+        const existingData = JSON.parse(sessionStorage.getItem('artworkData')) || [];
+        existingData.push(specificData);
+        sessionStorage.setItem('artworkData', JSON.stringify(existingData));
+        });
     }
 
     function updateArtwork(id){
@@ -160,7 +162,7 @@
         existingData.forEach((data) => {
             createDivFromData(data);
         });
-        updateFromJSONFile("id746efa7605134");
+
     };
 
     btn.addEventListener('click', () => {
