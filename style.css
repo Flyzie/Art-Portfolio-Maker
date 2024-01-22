@@ -39,7 +39,19 @@ h1{
     font-size: 20px;
     width: 35%
 }
+
+header > .site_name{
+    font-size: 20px;
+    width: 35%
+}
+
+header > .site_name > h1{
+    text-wrap: nowrap;
+}
+
+
 p{
+
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 300;
@@ -117,9 +129,14 @@ p{
     margin-top: 2rem;
 }
 
-
 .logo{
     margin: 0px 20px;
+    height: 100%;
+    width: auto;
+}
+
+.logo > img{
+    margin-top: 9%;
     height: 75%;
     width: auto;
 }
