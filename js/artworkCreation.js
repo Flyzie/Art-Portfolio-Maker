@@ -70,24 +70,21 @@
         popupAdd.classList.remove('open');
     }
 
-    // Function to remove div from sessionStorage
+
     function removeDivFromData(id) {
-        // Remove the div from the DOM
+ 
         const divToRemove = document.querySelector('.piece-1[uid="' + id + '"]');
         divToRemove.remove();
 
-        // Retrieve existing data from sessionStorage
-        const existingData = JSON.parse(sessionStorage.getItem('artworkData')) || [];
 
-        // Find the index of the data to be removed
+
         const index = existingData.findIndex(data => data.uid === id);
 
-        // Remove the data from the existing data array
+
         if (index !== -1) {
             existingData.splice(index, 1);
         }
 
-        // Save the updated data back to sessionStorage
         sessionStorage.setItem('artworkData', JSON.stringify(existingData));
     }
     
@@ -103,13 +100,13 @@
         // Get existing data from sessionStorage
         const existingData = JSON.parse(sessionStorage.getItem('artworkData')) || [];
     
-        // Add new data to the existing data
+       
         existingData.push(newData);
     
-        // Save the updated data back to sessionStorage
+
         sessionStorage.setItem('artworkData', JSON.stringify(existingData));
 
-        // Call the function to create a div from the new data
+      
         createDivFromData(newData);
     }
 
